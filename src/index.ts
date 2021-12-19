@@ -2,7 +2,7 @@ import axios, { AxiosInstance, AxiosRequestConfig } from "axios"
 import tough from "tough-cookie"
 import axiosCookieJarSupport from "axios-cookiejar-support"
 
-const BASE_URL = "https://www.khanacademy.org"
+const BASE_URL = "https://fr.khanacademy.org"
 
 export class KhanApi {
   authenticated: boolean
@@ -386,12 +386,6 @@ export class KhanApi {
   getCommoncore = async () => {
     return this.get(
       `${BASE_URL}/api/internal/graphql/getCommoncore?hash=3758682353`
-    ).then(({ data }) => data)
-  }
-
-  getCommoncore = async () => {
-    return this.get(
-      "https://www.khanacademy.org/api/internal/graphql/getCommoncore?hash=3758682353"
     ).then(({ data }) => data)
   }
 }
